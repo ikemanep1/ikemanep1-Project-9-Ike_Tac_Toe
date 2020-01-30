@@ -1,0 +1,22 @@
+body {
+  background-color: #003300;
+}
+.grid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: #ffbf00;
+  padding: 10px;
+  margin: 100px;
+}
+.item {
+  background-color: #ffffff;
+  border: 1px solid #ffbf00;
+  width: 100%;
+  padding: 50px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.winning-message {
+text-align: center;
+}
