@@ -1,33 +1,35 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <script type="text/javascript" src="js/jquery-3.4.1.js"></script>
-    <script type="text/javascript" src="js/scripts.js"></script>
-    <title></title>
-  </head>
-  <body>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="text/javascript" src="js/jquery-3.4.1.js"></script>
+  <script type="text/javascript" src="js/scripts.js"></script>
+  <title></title>
+</head>
+<body>
+  <div class="intro">
+    <h1>Tic-Tac-Toe</h1>
+    <p>Do you got the tictics?</p>
+    <button type="button" id="gameStart" name="button">Start!</button>
+  </div>
+  <div class="user_interface">
     <div class="grid" id="board">
-
-    <div class="item"></div>
-    <div class="item"></div>
-    <div class="item"></div>
-    <div class="item"></div>
-    <div class="item"></div>
-    <div class="item"></div>
-    <div class="item"></div>
-    <div class="item"></div>
-    <div class="item"></div>
+      <p class="item" id="item1"></p>
+      <p class="item" id="item2"></p>
+      <p class="item" id="item3"></p>
+      <p class="item" id="item4"></p>
+      <p class="item" id="item5"></p>
+      <p class="item" id="item6"></p>
+      <p class="item" id="item7"></p>
+      <p class="item" id="item8"></p>
+      <p class="item" id="item9"></p>
     </div>
-
-    <div class="row">
-          <div class="col-md-1">...</div>
-
-    <div class="winning-message">
-      <div data-winning-message-text></div>
-      <button id="restartButton" class="center">Restart</button>
-    </div>
-  </body>
+  </div>
+  <div class="winning-message">
+    <div data-winning-message-text></div>
+    <button id="restartButton" class="center">Restart</button>
+  </div>
+</body>
 </html>

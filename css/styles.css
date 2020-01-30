@@ -16,7 +16,23 @@ body {
   font-size: 30px;
   text-align: center;
 }
-
+.intro {
+  background-color: #7a7c7e;
+  color: #ffea4a;
+  border: 3px solid #ffc12c;
+  text-align: center;
+  margin: 25px;
+  padding: 5px;
+}
+.intro button {
+  color: #000000;
+}
 .winning-message {
 text-align: center;
+}
+.user_interface {
+  display: none;
+}
+#restartButton {
+  display: none;
 }
