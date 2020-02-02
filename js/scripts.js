@@ -2,12 +2,13 @@
 function Players() {
   this.playerOne = 1;
   this.playerTwo = 0;
-  this.insertion = [];
+  this.playerBlockOne = 0;
+  this.playerBlockTwo = 1;
   this.OneWinCheck = [];
   this.TwoWinCheck = [];
 }
 
-// Players.prototype.turnCheck();
+// Players.prototype.engine();
 //
 //
 //
@@ -15,27 +16,61 @@ function Players() {
 //
 
 
-
+// Players.prototype.turnCheck = function() {
+//   this.insertion = [];
+//   if (this.insertion === ["X"]) {
+//     alert("Nope!");
+//   }
+//   else if (this.insertion === ["O"]){
+//     alert("Nope!");
+//   } else {
+//     this.engine();
+//   }
+// };
 
 
 
 
 
 Players.prototype.engine = function() {
-  if (this.playerOne === 1) {
-    this.mark = "X";
+  if (this.playerOne === 1 && this.playerBlockOne === 0) {
+    this.insertion = [];
+    this.insertion.push("X");
     this.playerOne -= 1;
     this.playerTwo += 1;
+    this.playerBlockOne += 1;
+    this.playerBlockTwo -= 1;
+    console.log(this.playerBlockOne);
+    console.log(this.playerBlockTwo);
   }
-  else if (this.playerTwo === 1) {
-    this.mark = "O";
+  else if (this.playerTwo === 1 && this.playerBlockTwo === 0) {
+    this.insertion = [];
+    this.insertion.push("O");
     this.playerTwo -= 1;
     this.playerOne += 1;
-  };
+    this.playerBlockOne -= 1;
+    this.playerBlockTwo += 1;
+    console.log(this.playerBlockOne);
+    console.log(this.playerBlockTwo);
+
+  }
 };
 
-
-
+Players.prototype.blockage = function() {
+  if (this.playerOne === 1) {
+    if (this.playerBlockOne === 1) {
+      alert("rejected!");
+    } else {
+      this.engine();
+    }
+  } else {
+    if (this.playerBlockTwo === 1) {
+      alert("rejected!");
+    } else {
+      this.engine();
+    }
+  }
+};
 
 // Front-End, user interface
 
@@ -45,49 +80,40 @@ $(document).ready(function() {
     $(".user_interface").show();
     var game = new Players()
     $("#item1").click(function(event){
-      game.engine();
-      $("#item1").text(game.mark);
-      console.log(game.mark);
+      game.blockage();
+      $("#item1").text(game.insertion);
     });
     $("#item2").click(function(event){
-      game.engine();
-      $("#item2").text(game.mark);
-      console.log(game.mark);
+      game.blockage();
+      $("#item2").text(game.insertion);
     });
     $("#item3").click(function(event){
-      game.engine();
-      $("#item3").text(game.mark);
-      console.log(game.mark);
+      game.blockage();
+      $("#item3").text(game.insertion);
     });
     $("#item4").click(function(event){
-      game.engine();
-      $("#item4").text(game.mark);
-      console.log(game.mark);
+      game.blockage();
+      $("#item4").text(game.insertion);
     });
     $("#item5").click(function(event){
-      game.engine();
-      $("#item5").text(game.mark);
-      console.log(game.mark);
+      game.blockage();
+      $("#item5").text(game.insertion);
     });
     $("#item6").click(function(event){
-      game.engine();
-      $("#item6").text(game.mark);
-      console.log(game.mark);
+      game.blockage();
+      $("#item6").text(game.insertion);
     });
     $("#item7").click(function(event){
-      game.engine();
-      $("#item7").text(game.mark);
-      console.log(game.mark);
+      game.blockage();
+      $("#item7").text(game.insertion);
     });
     $("#item8").click(function(event){
-      game.engine();
-      $("#item8").text(game.mark);
-      console.log(game.mark);
+      game.blockage();
+      $("#item8").text(game.insertion);
     });
     $("#item9").click(function(event){
-      game.engine();
-      $("#item9").text(game.mark);
-      console.log(game.mark);
+      game.blockage();
+      $("#item9").text(game.insertion);
     });
   });
 });
