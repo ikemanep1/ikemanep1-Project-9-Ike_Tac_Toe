@@ -23,12 +23,12 @@ function Players() {
 
 Players.prototype.engine = function() {
   if (this.playerOne === 1) {
-this.insertion.css("'background-color", 'red');
+    this.mark = "X";
     this.playerOne -= 1;
     this.playerTwo += 1;
   }
   else if (this.playerTwo === 1) {
-this.insertion.css("'background-color", 'blue');
+    this.mark = "O";
     this.playerTwo -= 1;
     this.playerOne += 1;
   };
@@ -46,39 +46,48 @@ $(document).ready(function() {
     var game = new Players()
     $("#item1").click(function(event){
       game.engine();
-      $("#item1").text(Players.insertion);
+      $("#item1").text(game.mark);
+      console.log(game.mark);
     });
     $("#item2").click(function(event){
       game.engine();
-      $("#item2").text(Players.insertion);
+      $("#item2").text(game.mark);
+      console.log(game.mark);
     });
     $("#item3").click(function(event){
       game.engine();
-      $("#item3").text(Players.insertion);
+      $("#item3").text(game.mark);
+      console.log(game.mark);
     });
     $("#item4").click(function(event){
       game.engine();
-      $("#item4").text(Players.insertion);
+      $("#item4").text(game.mark);
+      console.log(game.mark);
     });
     $("#item5").click(function(event){
       game.engine();
-      $("#item5").text(Players.insertion);
+      $("#item5").text(game.mark);
+      console.log(game.mark);
     });
     $("#item6").click(function(event){
       game.engine();
-      $("#item6").text(Players.insertion);
+      $("#item6").text(game.mark);
+      console.log(game.mark);
     });
     $("#item7").click(function(event){
       game.engine();
-      $("#item7").text(Players.insertion);
+      $("#item7").text(game.mark);
+      console.log(game.mark);
     });
     $("#item8").click(function(event){
       game.engine();
-      $("#item8").text(Players.insertion);
+      $("#item8").text(game.mark);
+      console.log(game.mark);
     });
     $("#item9").click(function(event){
       game.engine();
-      $("#item9").text(Players.insertion);
+      $("#item9").text(game.mark);
+      console.log(game.mark);
     });
   });
 });
