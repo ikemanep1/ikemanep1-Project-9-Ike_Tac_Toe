@@ -26,7 +26,6 @@ Players.prototype.drawCheck = function() {
 }
 
 Players.prototype.engine = function() {
-    this.drawCheck();
   if (this.playerOne === 1) {
     this.insertion = [];
     this.insertion.push("X");
@@ -42,6 +41,8 @@ Players.prototype.engine = function() {
     this.playerOne += 1;
     this.playerTwoTotal.push(this.mark);
     this.twoCheckWin();
+  } else {    
+    this.drawCheck();
   }
 };
 
