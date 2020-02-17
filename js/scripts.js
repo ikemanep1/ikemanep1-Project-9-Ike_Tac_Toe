@@ -18,7 +18,6 @@ Players.prototype.twoWin = function() {
 }
 Players.prototype.drawCheck = function() {
   this.drawCount ++;
-  console.log(this.drawCount);
   if (this.drawCount >= 9) {
     $(".user_interface").hide();
     $(".drawMessage").show();
@@ -41,7 +40,7 @@ Players.prototype.engine = function() {
     this.playerOne += 1;
     this.playerTwoTotal.push(this.mark);
     this.twoCheckWin();
-  } else {    
+  } else {
     this.drawCheck();
   }
 };
@@ -64,8 +63,6 @@ Players.prototype.oneCheckWin = function() {
   } else if (this.playerOneTotal.includes(3) && this.playerOneTotal.includes(5) && this.playerOneTotal.includes(7)) {
     this.oneWin();
   }
-  console.log(this.playerOneTotal.sort().join(""))
-  console.log(this.playerTwoTotal.sort().join(""))
 };
 
 Players.prototype.twoCheckWin = function() {
@@ -86,8 +83,6 @@ Players.prototype.twoCheckWin = function() {
   } else if (this.playerTwoTotal.includes(3) && this.playerTwoTotal.includes(5) && this.playerTwoTotal.includes(7)) {
     this.twoWin();
   }
-  console.log(this.playerOneTotal.sort().join(""))
-  console.log(this.playerTwoTotal.sort().join(""))
 };
 
 $(document).ready(function() {
